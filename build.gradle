@@ -1,0 +1,13 @@
+plugins {
+    id 'base'
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+    // Los textos del juego llevan tildes y eñes
+    tasks.withType(JavaCompile).configureEach {
+        options.encoding = 'UTF-8'
+    }
+}
